@@ -10,8 +10,9 @@ ball1.ballType     //=> "regular"
 ball2.ballType     //=> "super"
 */
 
-var Ball = (ballType) => {
-  let obj = new Object(ballType);
-  obj.ballType = (ballType === 'super' ? 'super' : 'regular');
-  return obj;
+class Ball {
+  constructor(ballType) {
+    this.ballType = (ballType === 'super' ? 'super' : 'regular');
+    return this;
+  }
 };
